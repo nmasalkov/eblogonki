@@ -1,0 +1,3 @@
+class StakesController < ApplicationController
+
+end
