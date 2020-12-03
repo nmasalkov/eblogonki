@@ -1,0 +1,21 @@
+<% @participants.each do |participant| %>
+  <div class="progressbar">
+    <div class="progressbar__item">
+      <div class="progressbar__name"><%= participant.name %></div>
+      <%= content_tag :div, class: "progressbar__line", style: "--total: #{@count}; --value: #{participant.position}" do -%>
+        <% @checkpoints.each do |checkpoint| %>
+          <div class="progressbar__checkpoint dropdown__opener">
+            <%= checkpoint.name %>
+            <div class="dropdown">
+              <input type="text" class="dropdown__input" placeholder="сделать ставку" />
+              <div class="dropdown__actions">
+                <a href="#" type="button" class="button">на успех</a>
+                <a href="#" class="button">на проёб</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end -%>
+    </div>
+  </div>
+<% end %>

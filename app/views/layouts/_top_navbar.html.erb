@@ -1,7 +1,22 @@
-<!-- As a link -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand pretty" href="#">Домой</a>
-  <span class="navbar-text">
-      <%= link_to('Register', new_user_registration_path) %>
-  </span>
+<nav class="navbar navbar-light bg-light text-black-80">
+  <% if current_user %>
+  <a class="navbar-brand" href="#">
+    <span class="navbar_text text-b">
+      Добро пожаловать <%= current_user.name %>
+    </span>
+  </a>
+    <span class="navbar_text text-b">
+      У вас <%= current_user.points %> очков!!
+    </span>
+    <span class="navbar_text text-b">
+      <%= link_to "Сайн аут", destroy_user_session_path, :method => :delete %>
+    </span>
+  <% else %>
+    <span class="navbar-text">
+      <%= link_to('Войти', new_user_session_path) %>
+    </span>
+    <span class="navbar-text">
+      <%= link_to('Зарегаться', new_user_registration_path) %>
+    </span>
+  <% end %>
 </nav>
