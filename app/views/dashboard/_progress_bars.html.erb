@@ -11,6 +11,11 @@
                 <%= "  (#{stakes_for_checkpoint(checkpoint, participant).count})" %>
               <% end %>
             </span>
+            <div>
+              <% if checkpoint.scheduled? %>
+                <%= checkpoint.fancy_date %>
+              <% end %>
+            </div>
             <div class="dropdown">
               <% stakes_for_checkpoint(checkpoint, participant).each do |stake|  %>
                 <p class="stakes-info"><%="#{stake.user.name} поставил #{stake.sum} ОЧКО(в) на #{stake.pretty_type}" %></p>
