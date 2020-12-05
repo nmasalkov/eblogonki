@@ -19,11 +19,27 @@ class StakeCreator
         Stake.create!(@attrs)
       end
       @user.update!(points: @user.points - @attrs["sum"].to_i)
+      participant = Participant.find(@attrs["participant_id"])
+      log_body =
+          "#{fancy_time} #{@user.name} поставил #{@attrs["sum"]} на #{fancy_stake_type} #{participant.name} в #{fancy_checkpoint}"
+      Log.create(body: log_body)
     end
     @success = true
   rescue => e
     @errors << e.message
     @success = false
+  end
+
+  def fancy_stake_type
+    Stake.print_type(@attrs[:stake_type])
+  end
+
+  def fancy_time
+    Time.new.strftime("%d/%m/%g %R")
+  end
+
+  def fancy_checkpoint
+    Checkpoint.find(@attrs["checkpoint_id"]).name
   end
 
   def existing_stake

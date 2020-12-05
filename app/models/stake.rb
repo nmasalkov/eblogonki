@@ -10,6 +10,11 @@ class Stake < ApplicationRecord
     "на успех"
   end
 
+  def self.print_type(option)
+    return "проеб" if option == 0
+    return "успех" if option == 1
+  end
+
   scope :with_checkpoint_and_participant,
         -> (checkpoint_id, participant_id) { where(checkpoint_id: checkpoint_id, participant_id: participant_id) }
 

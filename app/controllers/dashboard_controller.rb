@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
     @participants = Participant.all
     @checkpoints = Checkpoint.all
     @count = Checkpoint.count
-    @leaders = User.order("points DESC")
+    @leaders = User.order("points DESC").limit(5)
+    @logs = Log.all
   end
 end

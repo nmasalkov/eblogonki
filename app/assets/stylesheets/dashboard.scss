@@ -66,6 +66,13 @@ body {
   margin-bottom: 10px;
 }
 
+.logboard {
+  margin-right: 100px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  height: 300px;
+}
+
 .leaderboard {
   margin-left: 100px;
   flex-grow: 1;
