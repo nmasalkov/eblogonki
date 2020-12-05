@@ -5,10 +5,10 @@ participants = [ { name: "Буйчик", nickname: "bui" },
 
 participants.each do |part|
   Participant.find_or_create_by( name: part[:name],
-                      nickname: part[:nickname])
+                      nickname: part[:nickname], position: 1)
 end
 
-checkpoints = [] + (1..7).map { |n| "Зачет #{n}" } + ["Теория ГАИ", "Практика ГАИ"]
+checkpoints = ["Старт"] + (1..7).map { |n| "Зачет #{n}" } + ["Теория ГАИ", "Практика ГАИ"]
 
 checkpoints.each_with_index do |val, ind |
   Checkpoint.find_or_create_by(name: val, order: ind + 1)

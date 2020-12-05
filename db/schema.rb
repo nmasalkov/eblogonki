@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_195017) do
+ActiveRecord::Schema.define(version: 2020_12_04_203044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,17 +27,19 @@ ActiveRecord::Schema.define(version: 2020_12_03_195017) do
     t.string "nickname", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "position"
   end
 
   create_table "stakes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "checkpoint_id"
     t.integer "sum"
-    t.integer "type"
+    t.integer "stake_type"
     t.boolean "success"
     t.boolean "closed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "participant_id"
   end
 
   create_table "tries", force: :cascade do |t|
@@ -50,14 +52,14 @@ ActiveRecord::Schema.define(version: 2020_12_03_195017) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
+    t.string "email", default: "mail@mail.com"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "points"
+    t.integer "points", default: 200
     t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

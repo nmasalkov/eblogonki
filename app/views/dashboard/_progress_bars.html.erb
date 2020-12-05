@@ -1,17 +1,30 @@
 <% @participants.each do |participant| %>
-  <div class="progressbar">
+  <div class="progressbar" xmlns="http://www.w3.org/1999/html">
     <div class="progressbar__item">
       <div class="progressbar__name"><%= participant.name %></div>
       <%= content_tag :div, class: "progressbar__line", style: "--total: #{@count}; --value: #{participant.position}" do -%>
         <% @checkpoints.each do |checkpoint| %>
           <div class="progressbar__checkpoint dropdown__opener">
-            <%= checkpoint.name %>
+            <span>
+              <%= checkpoint.name %>
+              <% if Stake.with_checkpoint_and_participant(checkpoint.id, participant.id).any? %>
+                <%= "  (#{Stake.with_checkpoint_and_participant(checkpoint.id, participant.id).count})" %>
+              <% end %>
+            </span>
             <div class="dropdown">
-              <input type="text" class="dropdown__input" placeholder="сделать ставку" />
-              <div class="dropdown__actions">
-                <a href="#" type="button" class="button">на успех</a>
-                <a href="#" class="button">на проёб</a>
-              </div>
+              <% Stake.with_checkpoint_and_participant(checkpoint.id, participant.id).each do |stake|  %>
+                <p class="stakes-info"><%="#{stake.user.name} поставил #{stake.sum} ОЧКО(в) на #{stake.pretty_type}" %></p>
+              <% end  %>
+              <%= form_with(url: "/stakes", method: "post", local: true ) do |f| %>
+                <%= f.hidden_field :checkpoint_id, value: checkpoint.id %>
+                <%= f.hidden_field :participant_id, value: participant.id %>
+                <%= f.text_field :sum, {class: "dropdown__input",
+                                        placeholder: "сделать ставку",
+                                        type: "number", required: "required",
+                                        min: "1"} %>
+                <%= f.submit("на успех", class: "button") %>
+                <%= f.submit("на проёб", class: "button") %>
+              <% end %>
             </div>
           </div>
         <% end %>

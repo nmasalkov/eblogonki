@@ -3,6 +3,6 @@ class DashboardController < ApplicationController
     @participants = Participant.all
     @checkpoints = Checkpoint.all
     @count = Checkpoint.count
-    # @leaders = User.all.sort_by(:points)
+    @leaders = User.order("points DESC")
   end
 end

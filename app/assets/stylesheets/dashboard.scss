@@ -210,3 +210,23 @@ body {
 .dropdown__actions button {
   width: calc(50% - 5px);
 }
+
+.flash-suc {
+  background-color: gold;
+  color: blue;
+  font-size: large;
+  position: fixed;
+  left: 50%;
+}
+
+.flash-err {
+  background-color: red;
+  color: blue;
+  font-size: large;
+  position: fixed;
+  left: 50%;
+}
+
+.stakes-info {
+  color: black;
+}
