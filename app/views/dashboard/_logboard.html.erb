@@ -1,7 +1,6 @@
 <div class="logboard">
   <div class="leaderboard__title">Логи</div>
   <% @logs.each do |log| %>
-    <p><%= log.body %></p>
+    <p><%= sanitize log.body %></p>
   <% end %>
 </div>
-

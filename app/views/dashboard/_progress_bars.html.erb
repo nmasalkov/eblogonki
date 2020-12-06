@@ -3,6 +3,14 @@
     <div class="progressbar__item">
       <div class="progressbar__name"><%= participant.name %></div>
       <%= content_tag :div, class: "progressbar__line", style: "--total: #{@count}; --value: #{participant.position}" do -%>
+        <div class="progressbar__fill">
+          <%= content_tag :div,
+                          class: "progressbar__image",
+                          style: "background-image: url(#{asset_path("#{participant.nickname}.jpg")})" do  -%>
+          <% end -%>
+
+          <%= image_tag "flame-img.png", class: "progressbar__flame" %>
+        </div>
         <% @checkpoints.each do |checkpoint| %>
           <div class="progressbar__checkpoint dropdown__opener">
             <span>

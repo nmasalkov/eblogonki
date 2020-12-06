@@ -13,7 +13,7 @@ body {
   font-family: 'Comic Sans MS', cursive;
   line-height: 1.4;
   font-size: 14px;
-  background-color: grey;
+  background-color: #000;
   color: #fff;
 }
 
@@ -25,6 +25,15 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: initial !important;
+  background-color: grey;
+}
+
+.logboard {
+  margin-right: 100px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  height: 300px;
 }
 
 .container:before, .container:after {
@@ -66,13 +75,6 @@ body {
   margin-bottom: 10px;
 }
 
-.logboard {
-  margin-right: 100px;
-  flex-grow: 1;
-  overflow-y: scroll;
-  height: 300px;
-}
-
 .leaderboard {
   margin-left: 100px;
   flex-grow: 1;
@@ -86,6 +88,10 @@ body {
 .leaderboard__item {
   display: flex;
   padding: 10px;
+}
+
+.progressbar__item + .progressbar__item {
+  margin-top: 50px;
 }
 
 .leaderboard__item + .leaderboard__item  {
@@ -116,6 +122,7 @@ body {
 
 .progressbar__name {
   margin: -7px 20px 0 0;
+  width: 50px;
 }
 
 .progressbar__line {
@@ -124,8 +131,7 @@ body {
   position: relative;
 }
 
-.progressbar__line:before {
-  content: '';
+.progressbar__fill {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,6 +141,16 @@ body {
   z-index: 1;
 }
 
+.progressbar__fill:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  top: -20px;
+  background: url("./images/flame-bg.png") repeat-x bottom;
+  background-size: contain;
+}
 
 .progressbar__checkpoint {
   flex-grow: 1;
@@ -167,6 +183,26 @@ body {
   background-color: #ffdc00;
 }
 
+.progressbar__image {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  transform: translateX(50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: contain;
+  z-index: 2;
+}
+
+.progressbar__flame {
+  position: absolute;
+  top: -24px;
+  right: -12px;
+  z-index: 1;
+  width: 100px;
+}
+
 .button {
   padding: 4px 8px 6px;
   font-family: inherit;
@@ -190,8 +226,17 @@ body {
   transform: translateX(-50%);
   background-color: #fff;
   padding: 15px;
-  width: 200px;
+  min-width: 200px;
+  max-height: 50vh;
+  overflow: auto;
   transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.stakes-info {
+  color: black;
+  white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 .dropdown__opener:not(:hover) .dropdown {
@@ -218,6 +263,42 @@ body {
   width: calc(50% - 5px);
 }
 
+.logboard p:not(:last-child) {
+  margin-top: 15px;
+}
+
+.logboard span:nth-child(1) {
+
+}
+
+.logboard span:nth-child(1) {
+  color: red;
+}
+
+.logboard span:nth-child(2) {
+  color: orange;
+}
+
+.logboard span:nth-child(3) {
+  color: yellow;
+}
+
+.logboard span:nth-child(4) {
+  color: #4cff4c;
+}
+
+.logboard span:nth-child(5) {
+  color: blue;
+}
+
+.logboard span:nth-child(6) {
+  color: purple;
+}
+
+.logboard span:nth-child(7) {
+  color: hotpink;
+}
+
 .flash-suc {
   background-color: gold;
   color: blue;
@@ -232,10 +313,6 @@ body {
   font-size: large;
   position: fixed;
   left: 50%;
-}
-
-.stakes-info {
-  color: black;
 }
 
 .nikitos-height {

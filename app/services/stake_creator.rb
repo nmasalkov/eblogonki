@@ -24,7 +24,7 @@ class StakeCreator
       @user.update!(points: @user.points - @attrs["sum"].to_i)
       participant = Participant.find(@attrs["participant_id"])
       log_body =
-          "#{fancy_time} #{@user.name} поставил #{@attrs["sum"]} на #{fancy_stake_type} #{participant.name} в #{fancy_checkpoint}"
+          "<span>#{fancy_time}</span> <span>#{@user.name}</span> <span>поставил #{@attrs["sum"]}</span> <span>на #{fancy_stake_type}</span> <span>#{participant.name}</span> <span>на #{fancy_checkpoint}</span>"
       Log.create(body: log_body)
     end
     @success = true
