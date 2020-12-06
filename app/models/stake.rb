@@ -1,7 +1,7 @@
 class Stake < ApplicationRecord
-  belongs_to :user
-  belongs_to :checkpoint
-  belongs_to :participant
+  belongs_to :user, optional: true
+  belongs_to :checkpoint, optional: true
+  belongs_to :participant, optional: true
 
   enum stake_type: [ :failure, :success]
 

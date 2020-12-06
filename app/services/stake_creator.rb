@@ -12,6 +12,9 @@ class StakeCreator
   end
 
   def save
+    if !validate_sum
+      raise "соси бибас, штраф тебе"
+    end
     ActiveRecord::Base.transaction do
       if existing_stake
         existing_stake.update!(sum: existing_stake.sum + @params["sum"].to_i)
@@ -28,6 +31,10 @@ class StakeCreator
   rescue => e
     @errors << e.message
     @success = false
+  end
+
+  def validate_sum
+    @params[:sum].to_i.positive?
   end
 
   def fancy_stake_type
