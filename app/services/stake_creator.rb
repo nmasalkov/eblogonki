@@ -16,9 +16,18 @@ class StakeCreator
   end
 
   def save
+
     if !validate_sum
       raise "соси бибас, штраф тебе"
     end
+
+    if Checkpoint.find(@attrs["checkpoint_id"].to_i).scheduled_date
+      if Time.now > Checkpoint.find(@attrs["checkpoint_id"].to_i).scheduled_date - 5.hours
+        raise "Ставки уже закрыты"
+      end
+    end
+
+
     set_new_values
     ActiveRecord::Base.transaction do
       if @stake
