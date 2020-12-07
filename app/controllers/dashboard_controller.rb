@@ -4,6 +4,6 @@ class DashboardController < ApplicationController
     @checkpoints = Checkpoint.order(:order)
     @count = Checkpoint.count
     @leaders = User.order("points DESC").limit(5)
-    @logs = Log.all
+    @logs = Log.all.order("created_at DESC")
   end
 end

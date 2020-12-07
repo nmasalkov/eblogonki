@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcd9c2b2-161e-467c-9857-7fb8ca0140d2" name="Default Changelist" comment="" />
+    <list default="true" id="fcd9c2b2-161e-467c-9857-7fb8ca0140d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/stakes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/stakes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/stake_creator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/stake_creator.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard/_info.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/_info.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -33,18 +40,9 @@
     <favorites_list name="eblogonki" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63584363">
+    <splitter split-orientation="horizontal" split-proportion="0.7264061">
       <split-first>
         <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/dashboard.scss">
               <provider selected="true" editor-type-id="text-editor">
@@ -52,20 +50,29 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/services/stake_creator.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/db/migrate/20201207182334_add_user_to_log.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/dashboard/_info.html.erb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
-                  <caret line="9" column="213" selection-start-line="9" selection-start-column="213" selection-end-line="9" selection-end-column="213" />
+                  <caret line="9" column="143" selection-start-line="9" selection-start-column="143" selection-end-line="9" selection-end-column="143" />
                 </state>
               </provider>
             </entry>
@@ -73,17 +80,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/stakes_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="62" lean-forward="true" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+            <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+                  <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -131,8 +138,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/dashboard.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="131">
-                  <caret line="283" column="1" lean-forward="true" selection-start-line="283" selection-start-column="1" selection-end-line="283" selection-end-column="1" />
+                <state relative-caret-position="156">
+                  <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -141,7 +148,7 @@
             <entry file="file://$PROJECT_DIR$/app/controllers/stakes_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
-                  <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+                  <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -150,7 +157,7 @@
             <entry file="file://$PROJECT_DIR$/app/services/stake_creator.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="348">
-                  <caret line="26" column="208" selection-start-line="26" selection-start-column="208" selection-end-line="26" selection-end-column="208" />
+                  <caret line="32" column="205" selection-start-line="32" selection-start-column="205" selection-end-line="32" selection-end-column="205" />
                 </state>
               </provider>
             </entry>
@@ -195,6 +202,7 @@
       <find>аж x5!!</find>
       <find>progressbar__image</find>
       <find>gree</find>
+      <find>url</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -209,7 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/top_navbar.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20201202181919_create_participants.rb" />
         <option value="$PROJECT_DIR$/app/models/try.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20201202184745_create_tries.rb" />
@@ -249,17 +256,18 @@
         <option value="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20201205140320_add_scheduled_date_to_checkpoint.rb" />
         <option value="$PROJECT_DIR$/app/models/checkpoint.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/models/stake.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/stakes_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/_logboard.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/index.html" />
         <option value="$PROJECT_DIR$/app/views/dashboard/_leaderboard.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/_progress_bars.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard.scss" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/_info.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20201207182334_add_user_to_log.rb" />
         <option value="$PROJECT_DIR$/app/services/stake_creator.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/stakes_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_info.html.erb" />
       </list>
     </option>
   </component>
@@ -457,24 +465,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606848464394</updated>
-      <workItem from="1606848472614" duration="65122000" />
+      <workItem from="1606848472614" duration="68019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65122000" />
+    <option name="totallyTimeSpent" value="68019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" sideWeight="0.50190115" side_tool="true" weight="0.24964234" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.15796179" />
       <window_info anchor="bottom" id="Messages" sideWeight="0.49928468" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49928468" visible="true" weight="0.23057325" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49928468" visible="true" weight="0.23057325" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5007153" side_tool="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -515,13 +524,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20201203171412_add_points_to_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -742,13 +744,6 @@
     <entry file="file://$PROJECT_DIR$/app/assets/images/wordart.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -760,13 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/stakes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -805,20 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_info.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="213" selection-start-line="9" selection-start-column="213" selection-end-line="9" selection-end-column="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/stake_creator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="26" column="208" selection-start-line="26" selection-start-column="208" selection-end-line="26" selection-end-column="208" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -836,8 +810,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/dashboard.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="283" column="1" lean-forward="true" selection-start-line="283" selection-start-column="1" selection-end-line="283" selection-end-column="1" />
+        <state relative-caret-position="-140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20201207182334_add_user_to_log.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/stake_creator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/stakes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="62" lean-forward="true" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_info.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="143" selection-start-line="9" selection-start-column="143" selection-end-line="9" selection-end-column="143" />
         </state>
       </provider>
     </entry>

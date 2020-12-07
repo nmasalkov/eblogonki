@@ -8,29 +8,40 @@ class StakeCreator
     @params = params
     detect_type(params["commit"])
     @attrs = @params.permit("checkpoint_id", "sum", "stake_type", "user_id", "participant_id")
+    @stake_sum = @attrs[:sum].to_i
     @user = User.find(user.id)
+    @initial_points = @user.points
+    @stake = existing_stake
+    @initial_sum = @stake.sum if @stake
   end
 
   def save
     if !validate_sum
       raise "соси бибас, штраф тебе"
     end
+    set_new_values
     ActiveRecord::Base.transaction do
-      if existing_stake
-        existing_stake.update!(sum: existing_stake.sum + @params["sum"].to_i)
+      if @stake
+        @stake.update!(sum: @new_stake_sum)
       else
         Stake.create!(@attrs)
       end
-      @user.update!(points: @user.points - @attrs["sum"].to_i)
+      @user.update!(points: @new_points)
       participant = Participant.find(@attrs["participant_id"])
       log_body =
-          "<span>#{fancy_time}</span> <span>#{@user.name}</span> <span>поставил #{@attrs["sum"]}</span> <span>на #{fancy_stake_type}</span> <span>#{participant.name}</span> <span>на #{fancy_checkpoint}</span>"
-      Log.create(body: log_body)
+          "<span>#{fancy_time}</span> <span>#{@user.name}</span> <span>поставил #{@stake_sum}</span> <span>на #{fancy_stake_type}</span> <span>#{participant.name}</span> <span>на #{fancy_checkpoint}</span>"
+      log_user_id = @user.id
+      Log.create(body: log_body, user_id: log_user_id)
     end
     @success = true
   rescue => e
     @errors << e.message
     @success = false
+  end
+
+  def set_new_values
+    @new_points = @initial_points - @stake_sum
+    @new_stake_sum = @stake.sum += @stake_sum if @stake
   end
 
   def validate_sum
