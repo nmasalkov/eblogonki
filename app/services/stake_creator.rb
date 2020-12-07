@@ -61,7 +61,10 @@ class StakeCreator
   end
 
   def existing_stake
-    Stake.where(checkpoint_id: @attrs["checkpoint_id"], user_id: @user.id, stake_type: @params[:stake_type]).first
+    Stake.where(checkpoint_id: @attrs["checkpoint_id"],
+                user_id: @user.id,
+                participant_id: @attrs[:participant_id],
+                stake_type: @params[:stake_type]).first
   end
 
   def detect_type(commit)
@@ -75,5 +78,4 @@ class StakeCreator
     end
     @params[:stake_type] = @params.delete "commit"
   end
-
 end
