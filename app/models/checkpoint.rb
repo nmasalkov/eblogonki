@@ -6,6 +6,10 @@ class Checkpoint < ApplicationRecord
     scheduled_date.present?
   end
 
+  def closed?
+    closed
+  end
+
   def fancy_date
     scheduled_date.strftime("%d/%m %R")
   end

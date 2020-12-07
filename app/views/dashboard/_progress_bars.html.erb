@@ -24,7 +24,8 @@
                 <%= checkpoint.fancy_date %>
               <% end %>
             </div>
-            <div class="dropdown">
+            <% unless checkpoint.closed? %>
+              <div class="dropdown">
               <% stakes_for_checkpoint(checkpoint, participant).each do |stake|  %>
                 <p class="stakes-info"><%="#{stake.user.name} поставил #{stake.sum} ОЧКО(в) на #{stake.pretty_type}" %></p>
               <% end  %>
@@ -41,7 +42,13 @@
               <% end %>
 
             </div>
+            <% else  %>
+              <div class="dropdown text-black">
+                <p>Зачет уже отыгран!</p>
+              </div>
+            <% end %>
           </div>
+
         <% end %>
       <% end -%>
     </div>
