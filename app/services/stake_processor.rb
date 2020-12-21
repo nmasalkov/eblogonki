@@ -44,7 +44,7 @@ class StakeProcessor
   end
 
   def loose_log
-    "<span>#{fancy_time} </span><span>Ставка #{@user.name} </spam><span>#{@stake.pretty_type} </span><span>#{@participant.name} </span>
+    "<span>#{fancy_time} </span><span>Ставка #{@user.name} </span><span>#{@stake.pretty_type} </span><span>#{@participant.name} </span>
 <span>в #{@stake.checkpoint.name} не сыграла!!! </span><span>Проигрыш составил </span><span>#{@stake.sum}</span>"
   end
 
