@@ -22,7 +22,7 @@ class StakeCreator
     end
 
     if Checkpoint.find(@attrs["checkpoint_id"].to_i).scheduled_date
-      if Time.now > Checkpoint.find(@attrs["checkpoint_id"].to_i).scheduled_date - 5.hours
+      if Time.now > Checkpoint.find(@attrs["checkpoint_id"].to_i).scheduled_date - 1.hours
         raise "Ставки уже закрыты"
       end
     end

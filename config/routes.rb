@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :dashboard, only: [:index]
 
+  get '/users/sign_up', to: "dashboard#index"
+
   resources :stakes
 
   root to: "dashboard#index"
